@@ -145,6 +145,45 @@ const Contact = () => {
         </div>
       </section>
 
+      <section className="contact-form-section" style={{ padding: '4rem 2rem', background: 'rgba(0,0,0,0.2)', marginBottom: '4rem' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }} className="glass-card">
+          <h2 className="section-title text-center" style={{ fontSize: '2rem', marginBottom: '2rem' }}>Send us a Message</h2>
+          <form 
+            onSubmit={async (e) => {
+              e.preventDefault();
+              const formData = new FormData(e.target);
+              const data = Object.fromEntries(formData.entries());
+              try {
+                const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(data)
+                });
+                if (response.ok) {
+                  alert('Message sent successfully!');
+                  e.target.reset();
+                }
+              } catch (err) {
+                alert('Error sending message.');
+              }
+            }} 
+            className="custom-form"
+          >
+            <div className="form-group" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div className="form-group" style={{ marginBottom: '1rem' }}>
+              <input type="text" name="subject" placeholder="Subject" required />
+            </div>
+            <div className="form-group" style={{ marginBottom: '1.5rem' }}>
+              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" className="btn-primary" style={{ width: '100%' }}>Send Message</button>
+          </form>
+        </div>
+      </section>
+
       <style dangerouslySetInnerHTML={{__html: `
         .social-icon:hover {
           background: var(--secondary-color) !important;

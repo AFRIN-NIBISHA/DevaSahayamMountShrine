@@ -28,7 +28,7 @@ const Donations = () => {
       return;
     }
     try {
-      const response = await fetch('http://localhost:5000/api/donation', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/donation`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
