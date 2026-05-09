@@ -87,16 +87,6 @@ const Donations = () => {
                       type="button"
                       className={`amount-btn ${formData.amount == amt ? 'active' : ''}`}
                       onClick={() => setPresetAmount(amt)}
-                      style={{
-                        padding: '10px',
-                        background: formData.amount == amt ? 'var(--secondary-color)' : 'rgba(0,0,0,0.5)',
-                        color: formData.amount == amt ? '#000' : 'var(--text-main)',
-                        border: `1px solid ${formData.amount == amt ? 'var(--secondary-color)' : 'var(--border-subtle)'}`,
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        fontWeight: 'bold',
-                        transition: 'all 0.3s'
-                      }}
                     >
                       {amt.toLocaleString()}
                     </button>
@@ -109,7 +99,6 @@ const Donations = () => {
                   onChange={handleChange} 
                   placeholder="Custom Amount" 
                   min="1" 
-                  style={{ background: 'rgba(0,0,0,0.7)' }}
                 />
               </div>
 

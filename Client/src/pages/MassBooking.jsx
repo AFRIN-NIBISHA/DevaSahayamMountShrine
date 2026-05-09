@@ -92,7 +92,7 @@ const MassBooking = () => {
                 <textarea name="intentionDetails" value={formData.intentionDetails} onChange={handleChange} placeholder="Enter intention details" rows="3" required></textarea>
               </div>
               
-              <div className="form-group days-group" style={{ background: 'rgba(0,0,0,0.4)', padding: '15px', borderRadius: '5px', border: '1px solid var(--border-subtle)' }}>
+              <div className="form-group days-group" style={{ background: 'var(--input-bg)', padding: '15px', borderRadius: '5px', border: '1px solid var(--input-border)' }}>
                 <label style={{ display: 'block', marginBottom: '10px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
                   Book the same mass intention for multiple consecutive days starting from your selected date.
                 </label>
