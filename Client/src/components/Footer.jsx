@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Youtube } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
@@ -11,6 +11,18 @@ const Footer = () => {
         <div className="footer-col">
           <h3 className="footer-title">Our Lady Of Sorrows Shrine</h3>
           <p>{t('footer.desc')}</p>
+          <div className="social-links" style={{ marginTop: '1.5rem' }}>
+            <a 
+              href="https://www.youtube.com/@devasahayammountshrine5677" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ color: 'var(--secondary-color)', transition: 'opacity 0.3s' }}
+              onMouseOver={(e) => e.currentTarget.style.opacity = '0.8'}
+              onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
+            >
+              <Youtube size={28} />
+            </a>
+          </div>
         </div>
         <div className="footer-col">
           <h3 className="footer-title">{t('footer.contact')}</h3>

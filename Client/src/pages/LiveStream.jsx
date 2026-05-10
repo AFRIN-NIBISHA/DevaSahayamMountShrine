@@ -2,6 +2,22 @@ import React from 'react';
 import { Tv, Bell, Share2 } from 'lucide-react';
 
 const LiveStream = () => {
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Live Mass Stream - St. Devasahayam Shrine',
+        text: 'Join us for live streaming of Holy Mass and special ceremonies.',
+        url: window.location.href,
+      }).catch(console.error);
+    } else {
+      alert('Share URL: ' + window.location.href);
+    }
+  };
+
+  const handleGetNotified = () => {
+    window.open('https://www.youtube.com/@devasahayammountshrine5677?sub_confirmation=1', '_blank');
+  };
+
   return (
     <div className="page-wrapper">
       <div className="page-header text-center animate-fade-in" style={{ paddingTop: '130px', paddingBottom: '30px' }}>
@@ -18,7 +34,11 @@ const LiveStream = () => {
           <Tv size={64} style={{ color: 'var(--text-muted)', margin: '0 auto 1rem' }} />
           <h2 style={{ color: 'var(--text-muted)' }}>No Live Stream Currently</h2>
           <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>Check back during mass times or special events</p>
-          <button className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+          <button 
+            className="btn-primary" 
+            onClick={handleGetNotified}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+          >
             <Bell size={18} /> Get Notified
           </button>
         </div>
@@ -64,7 +84,7 @@ const LiveStream = () => {
               <p style={{ color: 'var(--text-main)', fontSize: '0.95rem', marginBottom: '20px' }}>
                 Subscribe to our channel for notifications about upcoming streams and access to recorded masses
               </p>
-              <a href="#" className="btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#fff', color: '#7a1523', border: 'none' }}>
+              <a href="https://www.youtube.com/@devasahayammountshrine5677" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#fff', color: '#7a1523', border: 'none' }}>
                 <Tv size={18} /> Visit YouTube Channel
               </a>
             </div>
@@ -83,7 +103,11 @@ const LiveStream = () => {
               <li style={{ display: 'flex', gap: '10px' }}><span style={{ color: 'var(--secondary-color)' }}>•</span> Use the share button to invite family and friends to join the live mass</li>
             </ul>
             <div className="mt-4 pt-4 text-center" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-              <button className="btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <button 
+                className="btn-secondary" 
+                onClick={handleShare}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+              >
                 <Share2 size={18} /> Share Live Stream
               </button>
             </div>

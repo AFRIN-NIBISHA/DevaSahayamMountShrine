@@ -68,6 +68,11 @@ const resources = {
         "enquiry_title": "Accommodation Enquiries",
         "enquiry_sub": "Please contact for room availability",
         "phone": "+91 89037 60869"
+      },
+      "footer": {
+        "desc": "A blessed sanctuary dedicated to Saint Devasahayam, the first Indian layman to be canonized by the Catholic Church. Discover peace, history, and divine grace.",
+        "contact": "Contact Us",
+        "rights": "© 2026 Our Lady Of Sorrows Shrine. All rights reserved."
       }
     }
   },
@@ -137,6 +142,11 @@ const resources = {
         "enquiry_title": "தங்குமிட விசாரணைகள்",
         "enquiry_sub": "அறைகள் கிடைப்பது குறித்து அறிய தொடர்பு கொள்ளவும்.",
         "phone": "+91 89037 60869"
+      },
+      "footer": {
+        "desc": "கத்தோலிக்க திருச்சபையால் புனிதராக அறிவிக்கப்பட்ட முதல் இந்திய பொதுநிலையினரான புனித தேவசகாயத்திற்காக அர்ப்பணிக்கப்பட்ட ஒரு புனிதமான திருத்தலம். அமைதி, வரலாறு மற்றும் தெய்வீக அருளைக் கண்டறியுங்கள்.",
+        "contact": "தொடர்புக்கு",
+        "rights": "© 2026 வியாகுல அன்னை திருத்தலம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
       }
     }
   },
@@ -206,6 +216,11 @@ const resources = {
         "enquiry_title": "താമസ അന്വേഷണങ്ങൾ",
         "enquiry_sub": "മുറികളുടെ ലഭ്യതയ്ക്കായി ബന്ധപ്പെടുക.",
         "phone": "+91 89037 60869"
+      },
+      "footer": {
+        "desc": "കത്തോലിക്കാ സഭ വിശുദ്ധനായി പ്രഖ്യാപിച്ച ആദ്യത്തെ ഇന്ത്യൻ അൽമായനായ വിശുദ്ധ ദേവസഹായത്തിനായി സമർപ്പിച്ചിരിക്കുന്ന ഒരു പുണ്യ സങ്കേതം. സമാധാനവും ചരിത്രവും ദൈവകൃപയും കണ്ടെത്തൂ.",
+        "contact": "ബന്ധപ്പെടുക",
+        "rights": "© 2026 അവർ ലേഡി ഓഫ് സോറോസ് ഷ്രൈൻ. എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം."
       }
     }
   }
