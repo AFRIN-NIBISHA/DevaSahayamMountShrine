@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Navbar = ({ theme, toggleTheme }) => {
@@ -47,15 +47,15 @@ const Navbar = ({ theme, toggleTheme }) => {
         </div>
 
         <nav className={`main-nav ${isMenuOpen ? 'open' : ''}`}>
-          <Link to="/" onClick={() => setIsMenuOpen(false)}>{t('nav.home')}</Link>
-          <Link to="/about" onClick={() => setIsMenuOpen(false)}>{t('nav.about')}</Link>
-          <Link to="/mass-booking" onClick={() => setIsMenuOpen(false)}>{t('nav.mass_booking')}</Link>
-          <Link to="/donations" onClick={() => setIsMenuOpen(false)}>{t('nav.donations')}</Link>
-          <Link to="/gallery" onClick={() => setIsMenuOpen(false)}>{t('nav.gallery')}</Link>
-          <Link to="/livestream" onClick={() => setIsMenuOpen(false)}>{t('nav.livestream')}</Link>
-          <Link to="/testimonies" onClick={() => setIsMenuOpen(false)}>{t('nav.testimonies')}</Link>
-          <Link to="/prayer-request" onClick={() => setIsMenuOpen(false)}>{t('nav.prayer_request')}</Link>
-          <Link to="/contact" onClick={() => setIsMenuOpen(false)}>{t('nav.contact')}</Link>
+          <NavLink to="/" onClick={() => setIsMenuOpen(false)}>{t('nav.home')}</NavLink>
+          <NavLink to="/about" onClick={() => setIsMenuOpen(false)}>{t('nav.about')}</NavLink>
+          <NavLink to="/mass-booking" onClick={() => setIsMenuOpen(false)}>{t('nav.mass_booking')}</NavLink>
+          <NavLink to="/donations" onClick={() => setIsMenuOpen(false)}>{t('nav.donations')}</NavLink>
+          <NavLink to="/gallery" onClick={() => setIsMenuOpen(false)}>{t('nav.gallery')}</NavLink>
+          <NavLink to="/livestream" onClick={() => setIsMenuOpen(false)}>{t('nav.livestream')}</NavLink>
+          <NavLink to="/testimonies" onClick={() => setIsMenuOpen(false)}>{t('nav.testimonies')}</NavLink>
+          <NavLink to="/prayer-request" onClick={() => setIsMenuOpen(false)}>{t('nav.prayer_request')}</NavLink>
+          <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>{t('nav.contact')}</NavLink>
           <select 
             className="nav-lang-select" 
             onChange={handleLanguageChange}

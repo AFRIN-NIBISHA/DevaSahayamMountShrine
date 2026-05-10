@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Youtube } from 'lucide-react';
+import { MapPin, Phone, Mail, Tv } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
@@ -20,7 +20,7 @@ const Footer = () => {
               onMouseOver={(e) => e.currentTarget.style.opacity = '0.8'}
               onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
             >
-              <Youtube size={28} />
+              <Tv size={28} />
             </a>
           </div>
         </div>

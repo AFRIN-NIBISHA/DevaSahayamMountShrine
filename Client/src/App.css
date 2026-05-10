@@ -78,11 +78,14 @@
   transform: translateX(-50%);
 }
 
-.main-nav a:hover::after, .main-nav a.nav-highlight::after {
+.main-nav a:hover::after, 
+.main-nav a.nav-highlight::after,
+.main-nav a.active::after {
   width: 100%;
 }
 
-.nav-highlight {
+.nav-highlight,
+.main-nav a.active {
   color: var(--secondary-color) !important;
 }
 
